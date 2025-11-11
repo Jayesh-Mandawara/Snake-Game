@@ -1,0 +1,113 @@
+:root {
+  /* Background Colors */
+  --bg-primary-color: #121212;
+  --bg-fill-color: #eeeeee;
+  --bg-food-color: rgb(235, 54, 4);
+  /* Text Colors */
+  --primary-color: #efefef;
+  /* Border Color */
+  --border-primary-color: #4d4d4d;
+  --border-secondary-color: #4d4d4d28;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-primary-color);
+  color: var(--primary-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+main .btn {
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  transition: all ease 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+}
+main .btn:hover {
+  transform: scale(1.1);
+}
+main section {
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+main section .head .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.8rem;
+  border: 2px solid var(--border-primary-color);
+  border-radius: 1rem;
+}
+main section .head .info span {
+  font-weight: 700;
+}
+main section .board {
+  border: 1.3px solid var(--border-secondary-color);
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+}
+main section .board .block {
+  border: 1px solid var(--border-secondary-color);
+  border-radius: 50%;
+}
+main section .board .fill {
+  background-color: var(--bg-fill-color);
+}
+main section .board .food {
+  background-color: var(--bg-food-color);
+}
+main .modal {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  background-color: rgba(67, 67, 67, 0.4509803922);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .modal .start-game,
+main .modal .game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+main .modal .start-game h3,
+main .modal .game-over h3 {
+  font-size: 2rem;
+}
+main .modal .game-over {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
